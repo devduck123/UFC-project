@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let navWrapper = document.querySelector('nav');
         let nav = document.querySelector('#nav');
 
-        if (nav.style.display === 'none') {
+        if (nav.style.display !== 'flex') {
             nav.style.display = 'flex';
             document.querySelector('#nav-toggle').style.backgroundColor = 'rgb(33, 33, 33)';
             document.querySelector('#nav-toggle').style.color = '#d9204e';
