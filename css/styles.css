@@ -5,7 +5,7 @@
   --tertiary-color: #d9204e;
 }
 
-html {
+#home {
   font-family: "Voces", sans-serif;
   color: black;
   background-color: var(--primary-color);
@@ -16,7 +16,7 @@ html {
   background-repeat: no-repeat;
 }
 
-body {
+#home > body {
   display: grid;
   place-content: center;
   margin-left: 10%;
@@ -127,6 +127,19 @@ nav {
 #home-intro > p {
   padding: 2%;
   line-height: 1.6em;
+}
+
+#list-values {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1.2vh;
+}
+
+.value-item {
+    text-align: center;
+    padding: .6em;
+    margin-left: 20%;
 }
 
 footer {
