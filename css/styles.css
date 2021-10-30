@@ -1,0 +1,35 @@
+:root {
+    /* access variables with "var(--primary-color)" */
+    --primary-color: rgba(244, 244, 244, 0.5);
+    --secondary-color: #d44446;
+    --tertiary-color: #d9204e;
+ }
+ 
+ html {
+   font-family: 'Voces', sans-serif;
+   background-color: var(--primary-color);
+ }
+ 
+ * {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+ } 
+ 
+ ul {
+   list-style-type: none;
+ }
+ 
+ @media (prefers-reduced-motion: reduce) {
+     *,
+     ::before,
+     ::after {
+         animation-delay: -1ms !important;
+         animation-duration: 1ms !important;
+         animation-iteration-count: 1 !important;
+         background-attachment: initial !important;
+         scroll-behavior: auto !important;
+         transition-duration: 0s !important;
+         transition-delay: 0s !important;
+     }
+ }
