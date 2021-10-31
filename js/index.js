@@ -28,9 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  // log user out
   document.querySelector("#logout").onclick = () => {
-    // clear cookie
-    deleteCookie('username');
+    // clear username cookie
+    deleteCookie("username");
   };
 });
 

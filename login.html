@@ -38,59 +38,67 @@
   </head>
   <body>
     <header>
-        <div id="header-title"><h1>FINAL PROJECT: UFC LOVERS</h1></div>
-        <nav>
-          <div id="nav-toggle">MENU</div>
-          <ul id="nav">
-            <li class="nav-item">
-              <a href="index.html"><button class="nav-btn">Home</button></a>
-            </li>
-            <li class="nav-item">
-              <a href="https://www.google.com"
-                ><button class="nav-btn">About Us</button></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="https://www.google.com"
-                ><button class="nav-btn">Gallery</button></a
-              >
-            </li>
-            <li class="nav-item" id="login">
-              <a href="login.html"
-                ><button class="nav-btn">Login</button></a
-              >
-            </li>
-            <li class="nav-item" id="logout">
-              <a href="index.html"
-                ><button class="nav-btn">Logout</button></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="contact.html"
-                ><button class="nav-btn">Contact Us</button></a
-              >
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <div id="header-title"><h1>FINAL PROJECT: UFC LOVERS</h1></div>
+      <nav>
+        <div id="nav-toggle">MENU</div>
+        <ul id="nav">
+          <li class="nav-item">
+            <a href="index.html"><button class="nav-btn">Home</button></a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.google.com"
+              ><button class="nav-btn">About Us</button></a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="https://www.google.com"
+              ><button class="nav-btn">Gallery</button></a
+            >
+          </li>
+          <li class="nav-item" id="login">
+            <a href="login.html"><button class="nav-btn">Login</button></a>
+          </li>
+          <li class="nav-item" id="logout">
+            <a href="index.html"><button class="nav-btn">Logout</button></a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html"
+              ><button class="nav-btn">Contact Us</button></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <main>
-        <form>
-            <h2 id="form-title">Login!</h2>
-            <div class="form-input">
-              <label for="username">Username</label>
-              <input type="text" placeholder="johndoe123" id="username" required autocomplete="off" />
-            </div>
-            <div class="form-input">
-              <label for="password">Password</label>
-              <input type="password" placeholder="**********" id="password" required autocomplete="off" />
-            </div>
+    <main>
+      <form>
+        <h2 id="form-title">Login!</h2>
+        <div class="form-input">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            placeholder="johndoe123"
+            id="username"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-input">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            placeholder="**********"
+            id="password"
+            required
+            autocomplete="off"
+          />
+        </div>
 
-            <button id="btn-submit" type="submit">Submit</button>
-          </form>
-      </main>
+        <button id="btn-submit" type="submit" disabled>Submit</button>
+      </form>
+    </main>
 
-      <script src="js/index.js"></script>
-      <script src="js/login.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>

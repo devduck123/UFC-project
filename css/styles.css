@@ -159,7 +159,7 @@ footer {
 }
 
 #logout {
-    display: none;
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

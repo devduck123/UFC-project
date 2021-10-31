@@ -35,7 +35,7 @@ form {
   border-radius: 10px;
   overflow: hidden;
   font-family: "Voces", sans-serif;
-  box-shadow: 0 0 .6em var(--tertiary-color);
+  box-shadow: 0 0 0.6em var(--tertiary-color);
 }
 
 #form-title {
@@ -44,12 +44,12 @@ form {
 }
 
 .form-input {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0.6em;
-    font-size: clamp(0.8em, 1.5vw+0.7em, 1.2em);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0.6em;
+  font-size: clamp(0.8em, 1.5vw+0.7em, 1.2em);
+}
 
 input {
   padding: 0.2em;
@@ -65,7 +65,8 @@ input:focus {
 
 #btn-submit {
   box-shadow: 0 0 1em var(--tertiary-color);
-  background: white;
+  /* background: white; */
+  background: transparent;
   border-radius: 6%;
   border: 1px solid var(--tertiary-color);
   display: inline-block;

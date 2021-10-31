@@ -1,10 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // get input username
-  // store it in a cookie
-  // display it
+  // username & password validation
+  document.querySelector("#username").onkeyup = () => {
+    let usernameInput = document.querySelector("#username").value;
+    let passwordInput = document.querySelector("#password").value;
+    if (usernameInput.length > 0 && passwordInput.length > 0) {
+      document.querySelector("#btn-submit").disabled = false;
+      document.querySelector("#btn-submit").style.backgroundColor = "white";
+    } else {
+      document.querySelector("#btn-submit").disabled = true;
+      document.querySelector("#btn-submit").style.backgroundColor =
+        "transparent";
+    }
+  };
+
+  // username & password validation
+  document.querySelector("#password").onkeyup = () => {
+    let usernameInput = document.querySelector("#username").value;
+    let passwordInput = document.querySelector("#password").value;
+    if (usernameInput.length > 0 && passwordInput.length > 0) {
+      document.querySelector("#btn-submit").disabled = false;
+      document.querySelector("#btn-submit").style.backgroundColor = "white";
+    } else {
+      document.querySelector("#btn-submit").disabled = true;
+      document.querySelector("#btn-submit").style.backgroundColor =
+        "transparent";
+    }
+  };
+
   document.querySelector("#btn-submit").onclick = () => {
     let username = document.querySelector("#username").value;
-    // console.log('username: ' + username);
 
     // base way to create a cookie
     // document.cookie = "username=" + username + ";";
