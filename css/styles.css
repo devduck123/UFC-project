@@ -162,6 +162,20 @@ footer {
   display: none;
 }
 
+#currency-converter {
+    display: grid;
+    place-content: center;
+    margin-bottom: 1em;
+}
+
+#currency-converter > div {
+    margin-top: 1em;
+}
+
+#currency-submit {
+    /* TODO: */
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,

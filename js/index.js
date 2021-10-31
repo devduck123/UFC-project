@@ -32,7 +32,44 @@ document.addEventListener("DOMContentLoaded", () => {
     // clear username cookie
     deleteCookie("username");
   };
+
+  // convert BTC to 1 of inputted currency
+  document.querySelector("#currency-converter").onsubmit = () => {
+    fetch("https://api.coinbase.com/v2/exchange-rates?currency=BTC")
+      .then((response) => response.json())
+      .then((d) => {
+        // d wraps the JSON response
+
+        // sanitize user input
+        const currency = document
+          .querySelector("#currency")
+          .value.toUpperCase();
+
+        // get value corresponding to key of currency
+        const rate = d.data.rates[currency];
+
+        if (rate !== undefined) {
+          document.querySelector(
+            "#currency-result"
+          ).innerHTML = `1 BTC is currently equal to ${rate} ${currency}`;
+        } else {
+          document.querySelector("#currency-result").innerHTML =
+            "Unable to convert that currency.";
+        }
+      })
+      .catch((error) => {
+        // catch any errors with fetching API
+        console.log("Error: ", error);
+      });
+
+    return false;
+  };
 });
+
+// delete cookie
+function deleteCookie(name) {
+  document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT";
+}
 
 // get cookie
 // function getCookie(name) {
@@ -40,8 +77,3 @@ document.addEventListener("DOMContentLoaded", () => {
 //         return c.trim().startsWith(name + '=');
 //     });
 // }
-
-// delete cookie
-function deleteCookie(name) {
-  document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT";
-}
