@@ -80,7 +80,6 @@ input:focus {
 }
 
 #btn-submit:hover {
-  background: var(--tertiary-color);
   color: white;
   transform: scale(1.15);
   text-shadow: var(--tertiary-color);

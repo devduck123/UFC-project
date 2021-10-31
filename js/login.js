@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let passwordInput = document.querySelector("#password").value;
     if (usernameInput.length > 0 && passwordInput.length > 0) {
       document.querySelector("#btn-submit").disabled = false;
-      document.querySelector("#btn-submit").style.backgroundColor = "white";
+      document.querySelector("#btn-submit").style.backgroundColor = "#d9204e";
     } else {
       document.querySelector("#btn-submit").disabled = true;
       document.querySelector("#btn-submit").style.backgroundColor =
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let passwordInput = document.querySelector("#password").value;
     if (usernameInput.length > 0 && passwordInput.length > 0) {
       document.querySelector("#btn-submit").disabled = false;
-      document.querySelector("#btn-submit").style.backgroundColor = "white";
+      document.querySelector("#btn-submit").style.backgroundColor = "#d9204e";
     } else {
       document.querySelector("#btn-submit").disabled = true;
       document.querySelector("#btn-submit").style.backgroundColor =
