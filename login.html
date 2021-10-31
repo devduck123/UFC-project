@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Voces&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <script
+      src="https://kit.fontawesome.com/f03351eb9c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <header>
+        <div id="header-title"><h1>FINAL PROJECT: UFC LOVERS</h1></div>
+        <nav>
+          <div id="nav-toggle">MENU</div>
+          <ul id="nav">
+            <li class="nav-item">
+              <a href="index.html"><button class="nav-btn">Home</button></a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.google.com"
+                ><button class="nav-btn">About Us</button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="https://www.google.com"
+                ><button class="nav-btn">Gallery</button></a
+              >
+            </li>
+            <li class="nav-item" id="login">
+              <a href="login.html"
+                ><button class="nav-btn">Login</button></a
+              >
+            </li>
+            <li class="nav-item" id="logout">
+              <a href="index.html"
+                ><button class="nav-btn">Logout</button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="contact.html"
+                ><button class="nav-btn">Contact Us</button></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <form>
+            <h2 id="form-title">Login!</h2>
+            <div class="form-input">
+              <label for="username">Username</label>
+              <input type="text" placeholder="johndoe123" id="username" required autocomplete="off" />
+            </div>
+            <div class="form-input">
+              <label for="password">Password</label>
+              <input type="password" placeholder="**********" id="password" required autocomplete="off" />
+            </div>
+
+            <button id="btn-submit" type="submit">Submit</button>
+          </form>
+      </main>
+
+      <script src="js/index.js"></script>
+      <script src="js/login.js"></script>
+  </body>
+</html>

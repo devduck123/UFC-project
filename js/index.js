@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // if user logged in, hide Login link
+    if (document.cookie) {
+        document.querySelector('#login').style.display = 'none';
+        document.querySelector('#logout').style.display = 'inline-block';
+    }
+    else {
+        document.querySelector('#login').style.display = 'inline-block';
+        document.querySelector('#logout').style.display = 'none';
+    }
+
+    // toggle nav
     document.querySelector('#nav-toggle').onclick = () => {
         // console.log('toggled');
         let navWrapper = document.querySelector('nav');

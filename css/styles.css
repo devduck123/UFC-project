@@ -158,6 +158,10 @@ footer {
   text-align: center;
 }
 
+#logout {
+    display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
