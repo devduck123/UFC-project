@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // base way to create a cookie
     // document.cookie = "username=" + username + ";";
 
-    // create cookie lasting 10 min
+    // create cookie with key of username lasting 10 min
     createCookie("username", username, 10);
 
     // redirect user upon login
