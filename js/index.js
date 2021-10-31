@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // toggle nav
   document.querySelector("#nav-toggle").onclick = () => {
-    // console.log('toggled');
     let navWrapper = document.querySelector("nav");
     let nav = document.querySelector("#nav");
 

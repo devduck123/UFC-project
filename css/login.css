@@ -16,7 +16,9 @@ form {
   align-items: center;
   justify-content: center;
   width: 50%;
-  max-width: 500px;
+  max-width: 600px;
+  height: 60%;
+  max-height: 600px;
   color: black;
   background: linear-gradient(
     to bottom right,
@@ -48,7 +50,7 @@ form {
   flex-direction: column;
   align-items: flex-start;
   margin: 0.6em;
-  font-size: clamp(0.8em, 1.5vw+0.7em, 1.2em);
+  font-size: clamp(1em, 1.5vw+1em, 1.4em);
 }
 
 input {
@@ -65,7 +67,6 @@ input:focus {
 
 #btn-submit {
   box-shadow: 0 0 1em var(--tertiary-color);
-  /* background: white; */
   background: transparent;
   border-radius: 6%;
   border: 1px solid var(--tertiary-color);
@@ -75,7 +76,7 @@ input:focus {
   overflow: hidden;
   font-weight: bold;
   padding: 0.6em;
-  margin-top: 1em;
+  margin-top: 2em;
   transition: 0.6s ease-in-out;
 }
 
