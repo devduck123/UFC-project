@@ -1,92 +1,96 @@
 html {
-    font-family: "Voces", sans-serif;
-    color: black;
-    background-color: var(--secondary-color);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin-left: 10%;
-    margin-right: 10%;
+  font-family: "Voces", sans-serif;
+  color: black;
+  background-color: var(--secondary-color);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    max-width: 500px;
-    color: black;
-    background: linear-gradient(to top right, var(--tertiary-color), var(--primary-color), var(--tertiary-color));
-    margin-top: 2em;
-    margin-bottom: 2em;
-    padding: 1em;
-    padding-top: 1.4em;
-    padding-bottom: 2.4em;
-    position: absolute;
-    left: 25%;
-    text-align: left;
-    border-radius: 10px;
-    overflow: hidden;
-    font-family: 'Voces', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: 500px;
+  color: black;
+  background: linear-gradient(
+    to top right,
+    var(--tertiary-color),
+    var(--primary-color),
+    var(--tertiary-color)
+  );
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
+  padding-top: 1.4em;
+  padding-bottom: 2.4em;
+  position: absolute;
+  left: 25%;
+  text-align: left;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Voces", sans-serif;
 }
 
 #form-title {
-    font-size: clamp(1em, 1.5vw + 1em, 1.6em);
-    margin-bottom: 1em;
+  font-size: clamp(1em, 1.5vw + 1em, 1.6em);
+  margin-bottom: 1em;
 }
 
 .form-input {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: .6em;
-    font-size: clamp(.6em, 1vw+.7em, 1em);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0.6em;
+  font-size: clamp(0.6em, 1vw+0.7em, 1em);
 }
 
 input {
-    padding: .2em;
-    border: 1px solid black;
-    border-radius: 5%;
-    overflow: hidden;
-    color: black;
+  padding: 0.2em;
+  border: 1px solid black;
+  border-radius: 5%;
+  overflow: hidden;
+  color: black;
 }
 
 input:focus {
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.8);
 }
 
 textarea {
-    resize: vertical;
-    font-family: 'Voces', sans-serif;
-    line-height: 1.6em;
-    padding: .6em;
-    border: 1px solid black;
-    border-radius: 5%;
-    overflow: hidden;
-    color: black;
+  resize: vertical;
+  font-family: "Voces", sans-serif;
+  line-height: 1.6em;
+  padding: 0.6em;
+  border: 1px solid black;
+  border-radius: 5%;
+  overflow: hidden;
+  color: black;
 }
 
 #btn-submit {
-    box-shadow: 0 0 1em var(--tertiary-color);
-    background: white;
-    border-radius: 6%;
-    border: 1px solid var(--tertiary-color);
-    display: inline-block;
-    cursor: pointer;
-    outline: none;
-    overflow: hidden;
-    font-weight: bold;
-    padding: .6em;
-    margin-top: 1em;
-    transition: 0.6s ease-in-out;
+  box-shadow: 0 0 1em var(--tertiary-color);
+  background: white;
+  border-radius: 6%;
+  border: 1px solid var(--tertiary-color);
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  font-weight: bold;
+  padding: 0.6em;
+  margin-top: 1em;
+  transition: 0.6s ease-in-out;
 }
 
 #btn-submit:hover {
-    background: var(--tertiary-color);
-    color: white;
-    transform: scale(1.15);
-    text-shadow: var(--tertiary-color);
+  background: var(--tertiary-color);
+  color: white;
+  transform: scale(1.15);
+  text-shadow: var(--tertiary-color);
 }
