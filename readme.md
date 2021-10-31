@@ -43,3 +43,4 @@ Thanks, Devika Maini
 
 # CURRENCY CONVERTER
 - API by https://developers.coinbase.com
+(REQUEST LIMIT OF 10,000 PER HOUR)
