@@ -13,7 +13,7 @@
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-image: url(/assets/hero.jpg);
+  background-image: url(../assets/hero.jpg);
   margin-left: 10%;
   margin-right: 10%;
   display: grid;
