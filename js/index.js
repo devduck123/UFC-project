@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     deleteCookie("username");
   };
 
+  // TODO: VALIDATE THAT #currency-converter exists on current page
   // convert BTC to 1 of inputted currency
   document.querySelector("#currency-converter").onsubmit = () => {
     fetch("https://api.coinbase.com/v2/exchange-rates?currency=BTC")
