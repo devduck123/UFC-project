@@ -188,12 +188,13 @@ footer {
 }
 
 #currency:focus {
-  box-shadow: 0 0 0.8em rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 0.8em rgba(0, 0, 0, 0.4);
 }
 
 #currency-submit {
   cursor: pointer;
   opacity: 0.95;
+  box-shadow: 0 0 0.8em rgba(0, 0, 0, 0.4);
   border-radius: 12%;
   padding: 0.4em;
   background: transparent;

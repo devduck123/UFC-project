@@ -1,34 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
+  let login = document.querySelector("#login");
+  let logout = document.querySelector("#logout");
+
   // if user logged in, hide Login link
   if (document.cookie) {
-    document.querySelector("#login").style.display = "none";
-    document.querySelector("#logout").style.display = "inline-block";
+    login.style.display = "none";
+    logout.style.display = "inline-block";
   } else {
-    document.querySelector("#login").style.display = "inline-block";
-    document.querySelector("#logout").style.display = "none";
+    login.style.display = "inline-block";
+    logout.style.display = "none";
   }
 
+  let navToggle = document.querySelector("#nav-toggle");
+
   // toggle nav
-  document.querySelector("#nav-toggle").onclick = () => {
+  navToggle.onclick = () => {
     let navWrapper = document.querySelector("nav");
     let nav = document.querySelector("#nav");
 
     if (nav.style.display !== "flex") {
       nav.style.display = "flex";
-      document.querySelector("#nav-toggle").style.backgroundColor =
-        "rgb(33, 33, 33)";
-      document.querySelector("#nav-toggle").style.color = "#d9204e";
+      navToggle.style.backgroundColor = "rgb(33, 33, 33)";
+      navToggle.style.color = "#d9204e";
       navWrapper.style.backgroundColor = "#d9204e";
     } else {
       nav.style.display = "none";
       navWrapper.style.backgroundColor = "transparent";
-      document.querySelector("#nav-toggle").style.backgroundColor = "#d9204e";
-      document.querySelector("#nav-toggle").style.color = "rgb(33, 33, 33)";
+      navToggle.style.backgroundColor = "#d9204e";
+      navToggle.style.color = "rgb(33, 33, 33)";
     }
   };
 
   // log user out
-  document.querySelector("#logout").onclick = () => {
+  logout.onclick = () => {
     // clear username cookie
     deleteCookie("username");
   };
@@ -41,15 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((response) => response.json())
         .then((d) => {
           // d wraps the JSON response
-  
+
           // sanitize user input
-          const currency = document
+          let currency = document
             .querySelector("#currency")
             .value.toUpperCase();
-  
-          // get value corresponding to key of currency
-          const rate = d.data.rates[currency];
-  
+
+          // get value corresponding to key currency
+          let rate = d.data.rates[currency];
+
           if (rate !== undefined) {
             document.querySelector(
               "#currency-result"
@@ -63,23 +67,23 @@ document.addEventListener("DOMContentLoaded", () => {
           // catch any errors with fetching API
           console.log("Error: ", error);
         });
-  
+
       return false;
     };
   }
 });
 
-// delete cookie
+// function to delete cookie
 function deleteCookie(name) {
   document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT";
 }
 
-// get cookie
+// function to get cookie
 function getCookie(name) {
   let cookie = {};
-  document.cookie.split(';').forEach((el) => {
-    let [k,v] = el.split('=');
+  document.cookie.split(";").forEach((el) => {
+    let [k, v] = el.split("=");
     cookie[k.trim()] = v;
-  })
+  });
   return cookie[name];
 }
