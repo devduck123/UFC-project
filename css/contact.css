@@ -26,9 +26,7 @@ form {
   );
   margin-top: 2em;
   margin-bottom: 2em;
-  padding: 1em;
-  padding-top: 1.4em;
-  padding-bottom: 2.4em;
+  padding: 1.4em 1em 2.4em 1em;
   position: absolute;
   left: 25%;
   text-align: left;
