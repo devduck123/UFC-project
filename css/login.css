@@ -62,7 +62,7 @@ input {
 }
 
 input:focus {
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 .8em rgba(0, 0, 0, 0.8);
 }
 
 #btn-submit {
