@@ -1,5 +1,5 @@
 :root {
-  /* access variables with "var(--primary-color)" */
+  /* access variables: "var(--primary-color)" */
   --primary-color: rgba(244, 244, 244, 0.5);
   --secondary-color: rgb(33, 33, 33);
   --tertiary-color: #d9204e;
