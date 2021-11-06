@@ -1,23 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
   let login = document.querySelector("#login");
   let logout = document.querySelector("#logout");
+  let greeting = document.querySelector("#home-greeting");
 
   // if user logged in, hide Login link
   if (document.cookie) {
     login.style.display = "none";
     logout.style.display = "inline-block";
+    // TODO: add a greeting for the username using the cookie
+    if (document.querySelector("#home-greeting")) {
+      greeting.style.display = "inline-block";
+    }
   } else {
     login.style.display = "inline-block";
     logout.style.display = "none";
+    if (document.querySelector("#home-greeting")) {
+      greeting.style.display = "none";
+    }
   }
 
   let navToggle = document.querySelector("#nav-toggle");
-
   // toggle nav
   navToggle.onclick = () => {
     let navWrapper = document.querySelector("nav");
     let nav = document.querySelector("#nav");
-
     if (nav.style.display !== "flex") {
       nav.style.display = "flex";
       navToggle.style.backgroundColor = "rgb(33, 33, 33)";

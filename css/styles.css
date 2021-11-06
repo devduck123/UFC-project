@@ -218,6 +218,10 @@ footer {
   margin: 1.4em;
 }
 
+#home-greeting {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
