@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// ******************************** FUNCTIONS ********************************
+
 // displays logged-in content if logged in
 function showLoggedInContent(
   login,
