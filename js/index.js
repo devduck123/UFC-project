@@ -46,6 +46,7 @@ function toggleNav(navToggle) {
   navToggle.onclick = () => {
     let navWrapper = document.querySelector("nav");
     let nav = document.querySelector("#nav");
+    
     if (nav.style.display !== "flex") {
       nav.style.display = "flex";
       navToggle.style.backgroundColor = "rgb(33, 33, 33)";
