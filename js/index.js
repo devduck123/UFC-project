@@ -2,12 +2,21 @@ document.addEventListener("DOMContentLoaded", () => {
   let navToggle = document.querySelector("#nav-toggle");
   let login = document.querySelector("#login");
   let logout = document.querySelector("#logout");
+  let fighters = document.querySelector("#fighters");
+  let profile = document.querySelector("#profile");
   let greeting = document.querySelector("#home-greeting");
   let greetingTitle = document.querySelector("#greeting-title");
   let currencyConverter = document.querySelector("#currency-converter");
 
   // if user logged in, show login content
-  showLoggedInContent(login, logout, greeting, greetingTitle);
+  showLoggedInContent(
+    login,
+    logout,
+    fighters,
+    profile,
+    greeting,
+    greetingTitle
+  );
 
   // listen for toggle nav
   toggleNav(navToggle);
@@ -23,10 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // displays logged-in content if logged in
-function showLoggedInContent(login, logout, greeting, greetingTitle) {
+function showLoggedInContent(
+  login,
+  logout,
+  fighters,
+  profile,
+  greeting,
+  greetingTitle
+) {
   if (document.cookie) {
     login.style.display = "none";
     logout.style.display = "inline-block";
+    fighters.style.display = "inline-block";
+    profile.style.display = "inline-block";
     if (document.querySelector("#home-greeting")) {
       greeting.style.display = "inline-block";
       greetingTitle.textContent =
@@ -35,6 +53,8 @@ function showLoggedInContent(login, logout, greeting, greetingTitle) {
   } else {
     login.style.display = "inline-block";
     logout.style.display = "none";
+    fighters.style.display = "none";
+    profile.style.display = "none";
     if (document.querySelector("#home-greeting")) {
       greeting.style.display = "none";
     }
@@ -46,7 +66,7 @@ function toggleNav(navToggle) {
   navToggle.onclick = () => {
     let navWrapper = document.querySelector("nav");
     let nav = document.querySelector("#nav");
-    
+
     if (nav.style.display !== "flex") {
       nav.style.display = "flex";
       navToggle.style.backgroundColor = "rgb(33, 33, 33)";
