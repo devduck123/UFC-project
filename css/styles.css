@@ -92,7 +92,7 @@ nav {
   border: 2px solid black;
   border-radius: 4%;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
-  font-size: clamp(0.6em, 1vw + 0.6em, 1em);
+  font-size: clamp(0.6em, 1vw + 0.6em, 0.9em);
 }
 
 .nav-btn:hover {
@@ -120,8 +120,10 @@ nav {
 }
 
 #home-intro > p {
+  margin-top: 0.4em;
   padding: 2%;
   line-height: 1.6em;
+  font-size: clamp(0.6em, 1vw + 0.6em, 0.9em);
 }
 
 #list-values {
@@ -169,6 +171,7 @@ footer {
   display: grid;
   place-content: center;
   margin-bottom: 0.4em;
+  font-size: clamp(0.6em, 1vw + 0.6em, 0.9em);
 }
 
 #currency-converter > div {
@@ -220,6 +223,21 @@ footer {
 
 #home-greeting {
   display: none;
+  text-align: center;
+}
+
+#greeting-title {
+  font-size: clamp(1em, 1.5vw + 1em, 2em);
+  color: white;
+}
+
+#home-greeting > p {
+  margin-top: 0.4em;
+  margin-left: 20%;
+  padding: 2%;
+  line-height: 1.6em;
+  width: 60%;
+  font-size: clamp(0.6em, 1vw + 0.6em, 0.9em);
 }
 
 @media (prefers-reduced-motion: reduce) {

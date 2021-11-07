@@ -17,7 +17,7 @@ form {
   justify-content: center;
   width: 50%;
   max-width: 600px;
-  height: 60%;
+  height: 76%;
   max-height: 600px;
   color: black;
   background: linear-gradient(
@@ -26,8 +26,8 @@ form {
     var(--primary-color),
     var(--tertiary-color)
   );
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: .8em;
+  margin-bottom: .8em;
   padding: 1.4em 1em 2.4em 1em;
   position: absolute;
   left: 25%;

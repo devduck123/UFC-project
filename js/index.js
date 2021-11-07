@@ -1,15 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
+  let navToggle = document.querySelector("#nav-toggle");
   let login = document.querySelector("#login");
   let logout = document.querySelector("#logout");
   let greeting = document.querySelector("#home-greeting");
+  let greetingTitle = document.querySelector("#greeting-title");
 
   // if user logged in, hide Login link
   if (document.cookie) {
     login.style.display = "none";
     logout.style.display = "inline-block";
-    // TODO: add a greeting for the username using the cookie
     if (document.querySelector("#home-greeting")) {
       greeting.style.display = "inline-block";
+      greetingTitle.textContent =
+        "Hello " + String(getCookie("username")) + ",";
     }
   } else {
     login.style.display = "inline-block";
@@ -19,29 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  let navToggle = document.querySelector("#nav-toggle");
-  // toggle nav
-  navToggle.onclick = () => {
-    let navWrapper = document.querySelector("nav");
-    let nav = document.querySelector("#nav");
-    if (nav.style.display !== "flex") {
-      nav.style.display = "flex";
-      navToggle.style.backgroundColor = "rgb(33, 33, 33)";
-      navToggle.style.color = "#d9204e";
-      navWrapper.style.backgroundColor = "#d9204e";
-    } else {
-      nav.style.display = "none";
-      navWrapper.style.backgroundColor = "transparent";
-      navToggle.style.backgroundColor = "#d9204e";
-      navToggle.style.color = "rgb(33, 33, 33)";
-    }
-  };
+  // listen to toggle nav
+  toggleNav(navToggle);
 
-  // log user out
-  logout.onclick = () => {
-    // clear username cookie
-    deleteCookie("username");
-  };
+  // listen to log user out
+  logoutUser(logout);
 
   // validate that #currency-converter exists on current page
   if (document.querySelector("#currency-converter")) {
@@ -76,8 +61,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
       return false;
     };
-  }
+  };
 });
+
+//
+
+// function to toggle nav
+function toggleNav(navToggle) {
+  navToggle.onclick = () => {
+    let navWrapper = document.querySelector("nav");
+    let nav = document.querySelector("#nav");
+    if (nav.style.display !== "flex") {
+      nav.style.display = "flex";
+      navToggle.style.backgroundColor = "rgb(33, 33, 33)";
+      navToggle.style.color = "#d9204e";
+      navWrapper.style.backgroundColor = "#d9204e";
+    } else {
+      nav.style.display = "none";
+      navWrapper.style.backgroundColor = "transparent";
+      navToggle.style.backgroundColor = "#d9204e";
+      navToggle.style.color = "rgb(33, 33, 33)";
+    }
+  };
+}
+
+// function to log user out
+function logoutUser(logout) {
+  logout.onclick = () => {
+    // clear username cookie
+    deleteCookie("username");
+  };
+}
 
 // function to delete cookie
 function deleteCookie(name) {
