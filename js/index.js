@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let logout = document.querySelector("#logout");
   let greeting = document.querySelector("#home-greeting");
   let greetingTitle = document.querySelector("#greeting-title");
+  let currencyConverter = document.querySelector("#currency-converter");
 
   // if user logged in, show login content
   showLoggedInContent(login, logout, greeting, greetingTitle);
@@ -16,39 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // validate that #currency-converter exists on current page
   if (document.querySelector("#currency-converter")) {
-    // convert BTC to 1 of inputted currency
-    document.querySelector("#currency-converter").onsubmit = () => {
-      fetch("https://api.coinbase.com/v2/exchange-rates?currency=BTC")
-        .then((response) => response.json())
-        .then((d) => {
-          // d wraps the JSON response
-
-          // sanitize user input
-          let currency = document
-            .querySelector("#currency")
-            .value.toUpperCase();
-
-          // get value corresponding to key currency
-          let rate = d.data.rates[currency];
-
-          if (rate !== undefined) {
-            document.querySelector(
-              "#currency-result"
-            ).innerHTML = `1 BTC is currently equal to ${rate} ${currency}`;
-          } else {
-            document.querySelector("#currency-result").innerHTML =
-              "Unable to convert that currency.";
-          }
-        })
-        .catch((error) => {
-          // catch any errors with fetching API
-          console.log("Error: ", error);
-        });
-
-      // no redirect
-      return false;
-    };
-  };
+    // listen for convert BTC to 1 of inputted currency
+    convertCurrency(currencyConverter);
+  }
 });
 
 // displays logged-in content if logged in
@@ -95,9 +66,42 @@ function logoutUser(logout) {
     // clear username cookie
     deleteCookie("username");
   };
-  
+
   // no redirect
   return false;
+}
+
+// convert currency to 1 BTC
+function convertCurrency(currencyConverter) {
+  currencyConverter.onsubmit = () => {
+    fetch("https://api.coinbase.com/v2/exchange-rates?currency=BTC")
+      .then((response) => response.json())
+      .then((d) => {
+        // d wraps the JSON response
+
+        // sanitize user input
+        let currency = document.querySelector("#currency").value.toUpperCase();
+
+        // get value corresponding to key currency
+        let rate = d.data.rates[currency];
+
+        if (rate !== undefined) {
+          document.querySelector(
+            "#currency-result"
+          ).innerHTML = `1 BTC is currently equal to ${rate} ${currency}`;
+        } else {
+          document.querySelector("#currency-result").innerHTML =
+            "Unable to convert that currency.";
+        }
+      })
+      .catch((error) => {
+        // catch any errors with fetching API
+        console.log("Error: ", error);
+      });
+
+    // no redirect
+    return false;
+  };
 }
 
 // delete cookie
