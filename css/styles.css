@@ -41,7 +41,7 @@ ul {
 }
 
 nav {
-  width: 50%;
+  width: 60%;
   max-width: 70%;
   margin: 2vh 0 2vh 4vw;
   padding-bottom: 10px;
@@ -93,6 +93,7 @@ nav {
   border-radius: 4%;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
   font-size: clamp(0.6em, 1vw + 0.6em, 0.9em);
+  transition: ease-in-out 0.4s;
 }
 
 .nav-btn:hover {

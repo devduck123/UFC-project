@@ -5,27 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let greeting = document.querySelector("#home-greeting");
   let greetingTitle = document.querySelector("#greeting-title");
 
-  // if user logged in, hide Login link
-  if (document.cookie) {
-    login.style.display = "none";
-    logout.style.display = "inline-block";
-    if (document.querySelector("#home-greeting")) {
-      greeting.style.display = "inline-block";
-      greetingTitle.textContent =
-        "Hello " + String(getCookie("username")) + ",";
-    }
-  } else {
-    login.style.display = "inline-block";
-    logout.style.display = "none";
-    if (document.querySelector("#home-greeting")) {
-      greeting.style.display = "none";
-    }
-  }
+  // if user logged in, show login content
+  showLoggedInContent(login, logout, greeting, greetingTitle);
 
-  // listen to toggle nav
+  // listen for toggle nav
   toggleNav(navToggle);
 
-  // listen to log user out
+  // listen for user logout
   logoutUser(logout);
 
   // validate that #currency-converter exists on current page
@@ -59,14 +45,32 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log("Error: ", error);
         });
 
+      // no redirect
       return false;
     };
   };
 });
 
-//
+// displays logged-in content if logged in
+function showLoggedInContent(login, logout, greeting, greetingTitle) {
+  if (document.cookie) {
+    login.style.display = "none";
+    logout.style.display = "inline-block";
+    if (document.querySelector("#home-greeting")) {
+      greeting.style.display = "inline-block";
+      greetingTitle.textContent =
+        "Hello " + String(getCookie("username")) + ",";
+    }
+  } else {
+    login.style.display = "inline-block";
+    logout.style.display = "none";
+    if (document.querySelector("#home-greeting")) {
+      greeting.style.display = "none";
+    }
+  }
+}
 
-// function to toggle nav
+// toggles nav menu onclick
 function toggleNav(navToggle) {
   navToggle.onclick = () => {
     let navWrapper = document.querySelector("nav");
@@ -85,20 +89,23 @@ function toggleNav(navToggle) {
   };
 }
 
-// function to log user out
+// logs user out onclick
 function logoutUser(logout) {
   logout.onclick = () => {
     // clear username cookie
     deleteCookie("username");
   };
+  
+  // no redirect
+  return false;
 }
 
-// function to delete cookie
+// delete cookie
 function deleteCookie(name) {
   document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT";
 }
 
-// function to get cookie
+// get cookie
 function getCookie(name) {
   let cookie = {};
   document.cookie.split(";").forEach((el) => {
