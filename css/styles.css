@@ -103,15 +103,7 @@ nav {
   text-decoration: underline;
 }
 
-#fighters {
-  display: none;
-}
-
-#profile {
-  display: none;
-}
-
-#logout {
+#fighters, #profile, #logout {
   display: none;
 }
 
