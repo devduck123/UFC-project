@@ -43,4 +43,5 @@ Thanks, Devika Maini
 
 # CURRENCY CONVERTER
 - API by https://developers.coinbase.com
+- https://developers.coinbase.com/api/v2#exchange-rates 
 (REQUEST LIMIT OF 10,000 PER HOUR)
